@@ -1,5 +1,6 @@
 import AVFoundation
 import UIKit
+import ImageIO
 
 protocol CameraServiceDelegate: AnyObject {
     func cameraService(_ service: CameraService, didOutput sampleBuffer: CMSampleBuffer, orientation: CGImagePropertyOrientation)

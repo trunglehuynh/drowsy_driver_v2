@@ -28,7 +28,10 @@ struct PaywallView: View {
     }
 
     private func subscribe() {
-        let root = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?.keyWindow?.rootViewController
+        let root = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?
+            .windows
+            .first { $0.isKeyWindow }?
+            .rootViewController
         purchases.purchase(presentation: root) { success in onDone(success) }
     }
     private func restore() {

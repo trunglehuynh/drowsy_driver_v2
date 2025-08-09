@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 #if canImport(RevenueCat)
 import RevenueCat
 #endif

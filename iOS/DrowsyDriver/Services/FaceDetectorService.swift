@@ -1,6 +1,7 @@
 import CoreGraphics
 import CoreImage
 import Foundation
+import UIKit
 #if canImport(MLKitVision)
 import MLKitVision
 #endif
@@ -36,7 +37,7 @@ final class MLKitFaceDetector: FaceDetectorService {
 
         let detector = FaceDetector.faceDetector(options: options)
         let image = VisionImage(buffer: sampleBuffer)
-        image.orientation = orientation
+        image.orientation = uiImageOrientation(from: orientation)
 
         detector.process(image) { faces, error in
             guard error == nil, let faces = faces, !faces.isEmpty else {
@@ -59,5 +60,20 @@ final class MLKitFaceDetector: FaceDetectorService {
 #else
         completion(DetectedFaceInfo(hasFace: false, leftEyeOpenProbability: nil, rightEyeOpenProbability: nil, boundingBox: nil, imageSize: nil))
 #endif
+    }
+}
+
+
+private func uiImageOrientation(from cgOrientation: CGImagePropertyOrientation) -> UIImage.Orientation {
+    switch cgOrientation {
+    case .up: return .up
+    case .upMirrored: return .upMirrored
+    case .down: return .down
+    case .downMirrored: return .downMirrored
+    case .left: return .left
+    case .leftMirrored: return .leftMirrored
+    case .right: return .right
+    case .rightMirrored: return .rightMirrored
+    @unknown default: return .right
     }
 }
