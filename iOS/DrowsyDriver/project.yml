@@ -1,0 +1,43 @@
+name: DrowsyDriver
+options:
+  deploymentTarget:
+    iOS: '16.0'
+  createIntermediateGroups: true
+configs:
+  Debug: debug
+  Release: release
+targets:
+  DrowsyDriver:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Coordinators
+      - Features
+      - Domain
+      - Services
+      - Storage
+      - Resources
+    info:
+      path: Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.galaxylab.drowsydriver
+        PRODUCT_NAME: DrowsyDriver
+        SWIFT_VERSION: 5.0
+        IPHONEOS_DEPLOYMENT_TARGET: 16.0
+        TARGETED_DEVICE_FAMILY: 1,2
+        INFOPLIST_FILE: Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0.0
+        CODE_SIGN_STYLE: Automatic
+schemes:
+  DrowsyDriver:
+    build:
+      targets:
+        DrowsyDriver: all
+    run:
+      config: Debug
+    archive:
+      config: Release
