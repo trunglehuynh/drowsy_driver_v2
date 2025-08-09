@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/soundTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textMainColor"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/soundSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:text="0.0 s" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/soundChecked"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="checked"
+        android:src="@drawable/baseline_check_24"
+        android:visibility="gone"/>
+
+</LinearLayout>
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@android:color/white"
+    android:paddingHorizontal="20dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/menuBtn"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_menu_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/textMainColor"
+        android:textSize="@dimen/textTitle" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shortcut"
+        android:textColor="@color/textSubColor"
+        android:textSize="@dimen/textSub"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shortcutBtn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textSub"
+            android:padding="5dp"/>
+        <!--            android:text="1281 Platt ave, Milpitas, CA, California, USA"-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addShortcutBtn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:textSize="@dimen/textTitle"
+            android:layout_marginHorizontal="10dp"
+            android:padding="0dp"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/advanceOptionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Advanced Options" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:text="Start" />
+
+</LinearLayout>

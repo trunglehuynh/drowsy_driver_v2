@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#13975A</color>
+    <!--    <color name="colorAccent">#D81B60</color>-->
+    <color name="colorAccent">#15b76d</color>
+
+
+
+    <color name="appBackGround">#f2f2f2</color>
+
+    <color name="rowBackGround">#fcfcfc</color>
+
+    <color name="textMainColor">#252525</color>
+    <color name="textSubColor">#858585</color>
+
+    <color name="rowMainText">#252525</color>
+    <color name="rowSubText">#109e5d</color>
+    <color name="rowGroupText">#858585</color>
+    <color name="rowDivider">#e6e6e6</color>
+    <color name="textLink">#007BDC</color>
+
+
+
+    <!--    <color name="textColor">#FFFFFF</color>-->
+    <color name="default_icon_color">#858585</color>
+
+
+</resources>

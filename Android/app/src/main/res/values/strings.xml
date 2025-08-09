@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="volume_percent">Volume: %1$d%%</string>
+    <string name="tab_assets">Assets</string>
+    <string name="tab_notifications">Notifications</string>
+    <string name="tab_ringtones">Ringtones</string>
+    <string name="admod_id" translatable="false">ca-app-pub-2331141815165218~2840279622</string>
+    <string name="google_maps_key" translatable="false">AIzaSyB5J6uRkktMP6I_sH4ZuxTRZbkZVwbnZbY</string>
+
+
+    <string name="app_name">Drowsy Driver Alert</string>
+    <string name="permission_requires">This app requires CAMERA permissions</string>
+
+    <string name="sound_prompt">Select Sound</string>
+
+    <string-array name="sound_arrays">
+        <item>Cartoon Alert</item>
+        <item>Men Alert</item>
+        <item>Notification Up Alert</item>
+        <item>Pup Alert</item>
+        <item>Red Alert</item>
+        <item>Short Alert</item>
+        <item>Sweet Alert</item>
+
+    </string-array>
+
+    <string name="Make_sure_you_are_not_falling_asleep">Make sure you are not falling asleep while driving.</string>
+    <string name="disclaimer_contain">
+    This app is designed to assist in detecting signs of drowsiness, fatigue, or sleepiness while driving. While we strive to provide accurate and timely alerts, the technology may not always function correctly or detect every instance of drowsy or impaired driving. Various factors—including lighting conditions, device performance, and user behavior—can affect its reliability.
+\n\n
+    This app is not a substitute for good judgment. It does not encourage users to continue driving while feeling tired, sleepy, or drowsy. Drivers are solely responsible for their actions and decisions on the road.
+\n\n
+    If you feel tired or drowsy, you should stop and rest. Continuing to drive while not fully alert can be extremely dangerous to yourself and others.
+\n\n
+    By using this app, you acknowledge and accept full responsibility for your driving behavior and agree not to rely solely on this app for your safety or decision-making while driving.
+</string>
+
+    <string name="learn_more">Learn More</string>
+</resources>

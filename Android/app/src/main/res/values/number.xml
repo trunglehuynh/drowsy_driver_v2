@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        <dimen name="rowRadius">20dp</dimen>
+
+        <dimen name="textTitle">35sp</dimen>
+        <dimen name="textMain">20sp</dimen>
+        <dimen name="textSub">18sp</dimen>
+
+</resources>

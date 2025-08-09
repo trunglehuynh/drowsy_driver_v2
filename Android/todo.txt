@@ -1,0 +1,22 @@
+[done] 1. Fix sending email feedback
+[done] run in background button
+[done]2. Sensitive option
+[done]shortcut buttons
+
+[defer]2. Night Mode option
+[defer]3. Multiple cameras
+
+4. Save battery option
+5. other sounds on phone,
+6. random sound
+
+
+init ads
+init pro-mode
+
+"I want an email to be sent to me after N alerts in a determined period T"
+"Alert will be issued when the software cannot detect the human / face and exceed the set time."
+"I look forward to it to support an external camera, such as an external camera through the Type-C interface."
+"3, The APP continues to detect some status (such as GPS speed) to confirm that it is really driving a car and does need to enable detection."
+"Does it work well at night? Is it possible to use the app with an external camera with infrared light?"
+" I need to know if it is possible to record the driver behavior (or at least the number of alarms triggered)"

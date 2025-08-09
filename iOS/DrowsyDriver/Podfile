@@ -1,0 +1,8 @@
+platform :ios, '16.0'
+use_frameworks!
+
+target 'DrowsyDriver' do
+  # Use ML Kit Face Detection to mirror Android
+  pod 'GoogleMLKit/FaceDetection'
+end
+

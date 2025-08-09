@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    <item-->
+    <!--        android:id="@+id/menuAbout"-->
+    <!--        android:title="About" />-->
+
+
+    <item
+        android:id="@+id/menuUpdate"
+        android:title="Update" />
+
+    <item
+        android:id="@+id/menuRate"
+        android:title="Rate" />
+
+    <item
+        android:id="@+id/menuMoreApp"
+        android:title="More Apps" />
+
+    <item
+        android:id="@+id/menuShare"
+        android:title="Share" />
+
+    <item
+        android:id="@+id/menuFeedback"
+        android:title="Feedback" />
+
+</menu>

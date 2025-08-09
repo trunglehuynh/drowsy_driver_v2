@@ -1,0 +1,14 @@
+# Android build artifacts
+build/
+
+# iOS / Xcode
+DerivedData/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcuserdatad/
+xcuserdata/
+Pods/
+iOS/DrowsyDriver/Pods/
+
+# CocoaPods artifacts
+Podfile.lock

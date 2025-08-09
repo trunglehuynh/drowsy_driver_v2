@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>is_reminder_notification_enabled</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>is_sensitive_detection</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>is_max_volume_enabled</key>
+    <value>true</value>
+  </entry>
+</defaults>
