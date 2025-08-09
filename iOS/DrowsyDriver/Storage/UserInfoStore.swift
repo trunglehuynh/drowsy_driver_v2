@@ -8,6 +8,7 @@ final class UserInfoStore {
     private let spDuration = "SP_DURATION_THRESHOLD_ALERT"
     private let spEmptyFace = "ALERT_EMPTY_FACE"
     private let agreedDisclaimer = "AGREED_DISCLAIMER"
+    private let initInstallVersionKey = "INIT_INSTALL_VERSION"
 
     // Android defaults
     private let defaultSensitive = 90
@@ -18,6 +19,7 @@ final class UserInfoStore {
     private let maxDuration: Int64 = 5000
     private let defaultEmptyFace = false
     private let defaultAgreed = false
+    private let maxFreeVersionNumber = 17
 
     func getSensitiveThreshold() -> Int {
         let value = defaults.integer(forKey: spSensitive)
@@ -52,4 +54,13 @@ final class UserInfoStore {
         return defaults.bool(forKey: agreedDisclaimer)
     }
     func userAgreedDisclaimer() { defaults.set(true, forKey: agreedDisclaimer) }
+
+    // Initial install version (for paywall gating parity)
+    func mayUpdateInitialInstallVersion(currentVersion: Int) {
+        if defaults.object(forKey: initInstallVersionKey) == nil {
+            defaults.set(currentVersion, forKey: initInstallVersionKey)
+        }
+    }
+    func getInitialInstallVersion() -> Int { defaults.integer(forKey: initInstallVersionKey) }
+    func shouldShowPaywallForPreviousUsers() -> Bool { getInitialInstallVersion() > maxFreeVersionNumber }
 }

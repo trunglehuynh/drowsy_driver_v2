@@ -8,6 +8,7 @@ final class CameraViewModel: NSObject, ObservableObject {
     @Published var showDrowsyOverlay: Bool = false
     @Published var showEmptyFaceAlert: Bool = false
     @Published var faceBoundingBox: CGRect? = nil
+    @Published var isScreenLightOn: Bool = false
 
     private let permissionService: PermissionService
     let cameraService: CameraService
@@ -47,6 +48,8 @@ final class CameraViewModel: NSObject, ObservableObject {
     func onDisappear() {
         cameraService.stop()
     }
+
+    func toggleScreenLight() { isScreenLightOn.toggle() }
 }
 
 extension CameraViewModel: CameraServiceDelegate {

@@ -10,7 +10,7 @@ struct CameraView: View {
             CameraPreviewLayer(cameraService: viewModel.cameraService)
                 .ignoresSafeArea()
             if let box = viewModel.faceBoundingBox {
-                FaceBoxOverlay(box: box)
+                FaceBoxOverlay(box: box, isMirrored: viewModel.cameraService.isMirrored)
             }
             if viewModel.showDrowsyOverlay {
                 Image(systemName: "exclamationmark.triangle.fill")
@@ -41,8 +41,20 @@ struct CameraView: View {
                             .clipShape(Circle())
                             .foregroundColor(.white)
                     }
+                    Button {
+                        viewModel.toggleScreenLight()
+                    } label: {
+                        Image(systemName: viewModel.isScreenLightOn ? "sun.max.fill" : "sun.max")
+                            .padding(10)
+                            .background(.black.opacity(0.4))
+                            .clipShape(Circle())
+                            .foregroundColor(.white)
+                    }
                 }
                 Spacer()
+            }
+            if viewModel.isScreenLightOn {
+                Color.white.opacity(0.7).ignoresSafeArea()
             }
         }
         .onAppear { viewModel.onAppear() }
@@ -75,10 +87,13 @@ private final class PreviewView: UIView {
 
 private struct FaceBoxOverlay: View {
     let box: CGRect
+    let isMirrored: Bool
     var body: some View {
         GeometryReader { geo in
+            var x = box.origin.x
+            if isMirrored { x = 1.0 - box.origin.x - box.size.width }
             let rect = CGRect(
-                x: box.origin.x * geo.size.width,
+                x: x * geo.size.width,
                 y: box.origin.y * geo.size.height,
                 width: box.size.width * geo.size.width,
                 height: box.size.height * geo.size.height

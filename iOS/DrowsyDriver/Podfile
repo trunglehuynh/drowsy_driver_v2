@@ -4,5 +4,6 @@ use_frameworks!
 target 'DrowsyDriver' do
   # Use ML Kit Face Detection to mirror Android
   pod 'GoogleMLKit/FaceDetection'
+  # RevenueCat for purchases parity
+  pod 'RevenueCat'
 end
-

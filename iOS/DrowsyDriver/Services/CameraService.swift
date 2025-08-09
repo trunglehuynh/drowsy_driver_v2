@@ -10,6 +10,7 @@ final class CameraService: NSObject {
     private let output = AVCaptureVideoDataOutput()
     private let queue = DispatchQueue(label: "camera.video.queue")
     weak var delegate: CameraServiceDelegate?
+    private(set) var isMirrored: Bool = true
 
     func start() {
         session.beginConfiguration()
@@ -23,8 +24,15 @@ final class CameraService: NSObject {
         output.setSampleBufferDelegate(self, queue: queue)
         guard session.canAddOutput(output) else { return }
         session.addOutput(output)
-        if let connection = output.connection(with: .video), connection.isVideoOrientationSupported {
-            connection.videoOrientation = .portrait
+        if let connection = output.connection(with: .video) {
+            if connection.isVideoOrientationSupported { connection.videoOrientation = .portrait }
+            if connection.isVideoMirroringSupported {
+                connection.automaticallyAdjustsVideoMirroring = false
+                connection.isVideoMirrored = true
+                isMirrored = true
+            } else {
+                isMirrored = false
+            }
         }
         session.commitConfiguration()
         session.startRunning()
