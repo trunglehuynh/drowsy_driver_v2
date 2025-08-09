@@ -12,6 +12,7 @@ Steps
   - `pod install`
   - Open the generated `DrowsyDriver.xcworkspace` in Xcode.
 - Sounds: Copy alert audio (e.g., `short_alert.wav`) from Android assets to the app bundle (Resources). Keep filenames identical.
+- App Icon: Drop iPhone/iPad icons into `Resources/Assets.xcassets/AppIcon.appiconset` (a template was added). Xcode will guide missing sizes.
 - Capabilities: Background modes not required; keep screen awake if desired via app logic.
 - Build & Run on a real device for camera access.
 
