@@ -25,11 +25,11 @@ final class CameraCoordinator: ObservableObject {
     var rootView: some View {
         CameraView(viewModel: CameraViewModel(
             permissionService: self.permissionService,
-            cameraService: cameraService,
-            faceDetector: faceDetector,
-            drowsinessDetector: drowsinessDetector,
-            audioService: audioService,
-            userInfoStore: userInfoStore
+            cameraService: self.cameraService,
+            faceDetector: self.faceDetector,
+            drowsinessDetector: self.drowsinessDetector,
+            audioService: self.audioService,
+            userInfoStore: self.userInfoStore
         ))
     }
 }

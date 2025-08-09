@@ -91,7 +91,7 @@ private struct FaceBoxOverlay: View {
     var body: some View {
         GeometryReader { geo in
             var x = box.origin.x
-            if isMirrored { x = 1.0 - box.origin.x - box.size.width }
+            if isMirrored { x = CGFloat(1.0) - box.origin.x - box.size.width }
             let rect = CGRect(
                 x: x * geo.size.width,
                 y: box.origin.y * geo.size.height,
