@@ -2,6 +2,7 @@ import CoreGraphics
 import CoreImage
 import Foundation
 import UIKit
+import AVFoundation
 #if canImport(MLKitVision)
 import MLKitVision
 #endif

@@ -1,4 +1,5 @@
 import Foundation
+import CoreGraphics
 
 struct DetectedFaceInfo {
     let hasFace: Bool

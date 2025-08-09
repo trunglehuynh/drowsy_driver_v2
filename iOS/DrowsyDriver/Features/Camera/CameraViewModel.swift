@@ -2,6 +2,7 @@ import Combine
 import CoreGraphics
 import Foundation
 import SwiftUI
+import AVFoundation
 
 final class CameraViewModel: NSObject, ObservableObject {
     // Outputs

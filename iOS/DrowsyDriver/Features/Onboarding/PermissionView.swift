@@ -1,5 +1,6 @@
 import SwiftUI
 import AVFoundation
+import UIKit
 
 struct PermissionView: View {
     var onGranted: () -> Void
