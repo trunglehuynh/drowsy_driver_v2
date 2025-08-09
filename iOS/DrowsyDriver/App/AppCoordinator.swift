@@ -41,7 +41,7 @@ final class AppCoordinator: ObservableObject {
                     drowsinessDetector: drowsinessDetector,
                     audioService: audioService,
                     userInfoStore: userInfoStore
-                ).start()
+                ).rootView
             }
         }
     }

@@ -22,7 +22,7 @@ final class CameraCoordinator: ObservableObject {
         self.userInfoStore = userInfoStore
     }
 
-    func start() -> some View {
+    var rootView: some View {
         CameraView(viewModel: CameraViewModel(
             permissionService: self.permissionService,
             cameraService: cameraService,
