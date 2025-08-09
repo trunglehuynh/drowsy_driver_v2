@@ -12,3 +12,19 @@ iOS/DrowsyDriver/Pods/
 
 # CocoaPods artifacts
 Podfile.lock
+
+# Secrets and local configs
+*.keystore
+*.pepk
+*.jks
+Android/app/google-services.json
+Android/local.properties
+.DS_Store
+
+# Secrets and local configs
+*.keystore
+*.pepk
+*.jks
+Android/app/google-services.json
+Android/local.properties
+.DS_Store
