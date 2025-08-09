@@ -24,7 +24,7 @@ final class CameraCoordinator: ObservableObject {
 
     func start() -> some View {
         CameraView(viewModel: CameraViewModel(
-            permissionService: permissionService,
+            permissionService: self.permissionService,
             cameraService: cameraService,
             faceDetector: faceDetector,
             drowsinessDetector: drowsinessDetector,
