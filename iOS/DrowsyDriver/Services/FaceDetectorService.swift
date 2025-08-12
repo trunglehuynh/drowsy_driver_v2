@@ -48,8 +48,8 @@ final class MLKitFaceDetector: FaceDetectorService {
             // Choose largest face with min 100px size (Android parity)
             let filtered = faces.filter { $0.frame.width >= 100 && $0.frame.height >= 100 }
             let face = (filtered.max { min($0.frame.width, $0.frame.height) < min($1.frame.width, $1.frame.height) }) ?? faces[0]
-            let l = face.leftEyeOpenProbability?.floatValue
-            let r = face.rightEyeOpenProbability?.floatValue
+            let l = Float(face.leftEyeOpenProbability)
+            let r = Float(face.rightEyeOpenProbability)
             // Normalize bounding box [0,1] for overlay; Vision frame is in image coords
             let rect = face.frame
             let norm = CGRect(x: rect.origin.x / width,

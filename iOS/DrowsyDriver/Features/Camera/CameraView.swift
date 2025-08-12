@@ -90,18 +90,19 @@ private struct FaceBoxOverlay: View {
     let isMirrored: Bool
     var body: some View {
         GeometryReader { geo in
-            var x = box.origin.x
-            if isMirrored { x = CGFloat(1.0) - box.origin.x - box.size.width }
-            let rect = CGRect(
-                x: x * geo.size.width,
-                y: box.origin.y * geo.size.height,
-                width: box.size.width * geo.size.width,
-                height: box.size.height * geo.size.height
-            )
-            Path { path in
-                path.addRect(rect)
-            }
-            .stroke(.green, lineWidth: 4)
+            let xNorm = isMirrored
+                   ? (1 - box.origin.x - box.size.width)
+                   : box.origin.x
+
+               let rect = CGRect(
+                   x: xNorm * geo.size.width,
+                   y: box.origin.y * geo.size.height,
+                   width: box.size.width * geo.size.width,
+                   height: box.size.height * geo.size.height
+               )
+
+               Path { $0.addRect(rect) }
+                   .stroke(.green, lineWidth: 4)
         }
     }
 }
